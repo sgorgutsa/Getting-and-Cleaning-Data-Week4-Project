@@ -28,11 +28,11 @@ Note: since in my case source dataset in NOT in the same directory as the R scri
 # Structure of the independent tidy data set
 "tidydata.txt" contais 188 rows and 88 columns. The data for is grouped first by Subject (ID of the test subject, from 1 to 30), then by Actitivity. There are 6 types of Activity possible:
 
-1.WALKING
-2.WALKING_UPSTAIRS
-3.WALKING_DOWNSTAIRS
-4.SITTING
-5.STANDING
-6.LAYING
+ 1.WALKING
+ 2.WALKING_UPSTAIRS
+ 3.WALKING_DOWNSTAIRS
+ 4.SITTING
+ 5.STANDING
+ 6.LAYING
 
 For the list of measurements see CodeBook.md
