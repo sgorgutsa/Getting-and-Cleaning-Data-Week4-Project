@@ -23,8 +23,6 @@ According to assignment requirements, R script:
 
 More comments are provided in the script itself and CodeBook.md
 
-Note: since in my case source dataset in NOT in the same directory as the R script, a variable 'path2data' is introduced. It should contain path to the directory into which you unzipped 'UCI HAR Dataset'.
-
 # Structure of the independent tidy data set
 "tidydata.txt" contais 188 rows and 88 columns. The data for is grouped first by Subject (ID of the test subject, from 1 to 30), then by Actitivity. There are 6 types of Activity possible:
 
