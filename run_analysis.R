@@ -2,7 +2,6 @@
 library(data.table)
 library(dplyr)
 
-
 # Read training data
 subjectTrain <- read.table("D:c2t3/Data Science/Cleaning Data/UCI HAR Dataset/train/subject_train.txt", header = FALSE)
 activityTrain <- read.table("D:c2t3/Data Science/Cleaning Data/UCI HAR Dataset/train/y_train.txt", header = FALSE)
@@ -41,12 +40,6 @@ columns2extract <- c(grep(".*Mean.*|.*Std.*", names(MergedData), ignore.case=TRU
 extractedData <- MergedData[,columns2extract]
 
 # Replace numeric activity variables to names from 'activityLabels' by turning 'activity' into factor
-
-#extractedData$Activity <- as.character(extractedData$Activity)
-#for (i in 1:6)
-#    {
-#    extractedData$Activity[extractedData$Activity == i] <- as.character(activityLabels[i,2])
-#    }
 
 extractedData$Activity <- factor(extractedData$Activity, levels = activityLabels[,1], labels = activityLabels[,2])
 
