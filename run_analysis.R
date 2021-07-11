@@ -2,22 +2,19 @@
 library(data.table)
 library(dplyr)
 
-# Define location of the source data set
-path2data <- "D:c2t3/Data Science/Cleaning Data"
-
 # Read training data
-subjectTrain <- read.table(paste(path2data,"/UCI HAR Dataset/train/subject_train.txt",sep=""), header = FALSE)
-activityTrain <- read.table(paste(path2data, "/UCI HAR Dataset/train/y_train.txt",sep=""), header = FALSE)
-featuresTrain <- read.table(paste(path2data,"/UCI HAR Dataset/train/X_train.txt",sep=""), header = FALSE)
+subjectTrain <- read.table("./UCI HAR Dataset/train/subject_train.txt", header = FALSE)
+activityTrain <- read.table("./UCI HAR Dataset/train/y_train.txt", header = FALSE)
+featuresTrain <- read.table("./UCI HAR Dataset/train/X_train.txt", header = FALSE)
 
 # Read test data
-subjectTest <- read.table(paste(path2data,"/UCI HAR Dataset/test/subject_test.txt",sep=""), header = FALSE)
-activityTest <- read.table(paste(path2data,"/UCI HAR Dataset/test/y_test.txt",sep=""), header = FALSE)
-featuresTest <- read.table(paste(path2data,"/UCI HAR Dataset/test/X_test.txt",sep=""), header = FALSE)
+subjectTest <- read.table("./UCI HAR Dataset/test/subject_test.txt", header = FALSE)
+activityTest <- read.table("./UCI HAR Dataset/test/y_test.txt", header = FALSE)
+featuresTest <- read.table("./UCI HAR Dataset/test/X_test.txt", header = FALSE)
 
 # Read features names and activity labels
-featureNames <- read.table(paste(path2data,"/UCI HAR Dataset/features.txt",sep=""))
-activityLabels <- read.table(paste(path2data,"/UCI HAR Dataset/activity_labels.txt",sep=""), header = FALSE)
+featureNames <- read.table("./UCI HAR Dataset/features.txt")
+activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt", header = FALSE)
 
 # 1. Merging train and test datasets
 subject <- rbind(subjectTrain, subjectTest)

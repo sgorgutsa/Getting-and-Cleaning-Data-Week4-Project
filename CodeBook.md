@@ -7,7 +7,6 @@ Generated "tidydata.txt" contains the average of each variable for each activity
 To generate "tidydata.txt":
 
 1. Download data from the link below and unzip it into desired location
-2. In the R script change 'path2data' variable to the corresponding directory
 2. Execute the R script.
 
 # Source Data
