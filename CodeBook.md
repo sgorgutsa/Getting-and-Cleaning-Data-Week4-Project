@@ -16,36 +16,36 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 # Variables
 "run_analysis.R" performs the following steps:
 
-'subjectTrain'  - stores data from the downloaded files to identify each subject (from 1 to 30)
-'activityTrain' - stores data from the downloaded files for training labels
-'featuresTrain' - stores data from the downloaded files for training set
+'subjectTrain'  - stores data from the downloaded files to identify each subject (from 1 to 30)  
+'activityTrain' - stores data from the downloaded files for training labels  
+'featuresTrain' - stores data from the downloaded files for training set  
 
-'subjectTest'  - stores data from the downloaded files to identify each subject (from 1 to 30)
-'activityTrain' - stores data from the downloaded files for test labels
-'featuresTrain' - stores data from the downloaded files for test set
+'subjectTest'  - stores data from the downloaded files to identify each subject (from 1 to 30)  
+'activityTrain' - stores data from the downloaded files for test labels  
+'featuresTrain' - stores data from the downloaded files for test set  
 
-'featuresNames' - stores data from the downloaded files for the list of all features
-'activityLabels' - stores data from the downloaded files for activity class labels 
+'featuresNames' - stores data from the downloaded files for the list of all features  
+'activityLabels' - stores data from the downloaded files for activity class labels   
 
-'subject' - merged train and test datasets, subject IDs
-'activity' - merged train and test datasets, test labels
-'features' - merged train and test datasest, test sets
+'subject' - merged train and test datasets, subject IDs  
+'activity' - merged train and test datasets, test labels  
+'features' - merged train and test datasest, test sets  
 
-'MergedData' - 'features', 'activity' and 'subject' datasets merged into one
-'columns2extract' - defines which colums in 'MergedData' contain mean and standard deviation for each measurement
-'extractedData' - subset of the 'MergedData' containing only mean and standard deviation for each measurement
+'MergedData' - 'features', 'activity' and 'subject' datasets merged into one  
+'columns2extract' - defines which colums in 'MergedData' contain mean and standard deviation for each measurement  
+'extractedData' - subset of the 'MergedData' containing only mean and standard deviation for each measurement  
 
-'TidyData' - output dataset containing average of each variable for each activity and each subject
+'TidyData' - output dataset containing average of each variable for each activity and each subject  
 
 # Output dataset description 
 "tidydata.txt" contais 188 rows and 88 columns. The data for is grouped first by Subject (ID of the test subject, from 1 to 30), then by Actitivity. There are 6 types of Activity possible:
 
-1.WALKING
-2.WALKING_UPSTAIRS
-3.WALKING_DOWNSTAIRS
-4.SITTING 
-5.STANDING
-6.LAYING
+1.WALKING  
+2.WALKING_UPSTAIRS  
+3.WALKING_DOWNSTAIRS  
+4.SITTING   
+5.STANDING  
+6.LAYING  
 
 # Measurements available in the output dataset
 "tidydata.txt" contains mean and std values for the follwoing varibales:
