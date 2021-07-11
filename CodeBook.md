@@ -4,11 +4,6 @@ date: 2021-07-11
 # Code Book
 Generated "tidydata.txt" contains the average of each variable for each activity and each subject from the Human Activity Recognition Using Smartphones Data Set
 
-To generate "tidydata.txt":
-
-1. Download data from the link below and unzip it into desired location
-2. Execute the R script.
-
 # Source Data
 The source data represents the data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
 
@@ -18,23 +13,31 @@ The data for this project is available at:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
 
-# ABout R script
+# Variables
 "run_analysis.R" performs the following steps:
 
-1a. Reading Train datasets from the source data
-1b. Reading Test datasets from the source data
-1c. Reading features names and activity labels from the source data.
+'subjectTrain'  - stores data from the downloaded files to identify each subject (from 1 to 30)
+'activityTrain' - stores data from the downloaded files for training labels
+'featuresTrain' - stores data from the downloaded files for training set
 
-2a. Merging Train and Test datasets
-2b. Naming 'features' columns based on features names fromt the source data
-2c. Naming 'activity' and 'subject' data sets
-2d. Merging 'features', 'activity' and 'subject' datasets into one data set
+'subjectTest'  - stores data from the downloaded files to identify each subject (from 1 to 30)
+'activityTrain' - stores data from the downloaded files for test labels
+'featuresTrain' - stores data from the downloaded files for test set
 
-3. Extracting only the measurements on the mean and standard deviation for each measurement.
+'featuresNames' - stores data from the downloaded files for the list of all features
+'activityLabels' - stores data from the downloaded files for activity class labels 
 
-4. Generating and writing "tidydata.txt" containing the average of each variable for each activity and each subject (sorted first by subject, then by activity)
+'subject' - merged train and test datasets, subject IDs
+'activity' - merged train and test datasets, test labels
+'features' - merged train and test datasest, test sets
 
-# Dataset description 
+'MergedData' - 'features', 'activity' and 'subject' datasets merged into one
+'columns2extract' - defines which colums in 'MergedData' contain mean and standard deviation for each measurement
+'extractedData' - subset of the 'MergedData' containing only mean and standard deviation for each measurement
+
+'TidyData' - output dataset containing average of each variable for each activity and each subject
+
+# Output dataset description 
 "tidydata.txt" contais 188 rows and 88 columns. The data for is grouped first by Subject (ID of the test subject, from 1 to 30), then by Actitivity. There are 6 types of Activity possible:
 
 1.WALKING
@@ -44,7 +47,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 5.STANDING
 6.LAYING
 
-# Measurements available in the dataset
+# Measurements available in the output dataset
 "tidydata.txt" contains mean and std values for the follwoing varibales:
 "Subject"
 "Activity" 
